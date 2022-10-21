@@ -1,0 +1,1 @@
+SELECT * FROM product WHERE is_active = 1 LIMIT 0,12
