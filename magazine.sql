@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 21 2022 г., 12:06
+-- Время создания: Окт 21 2022 г., 12:19
 -- Версия сервера: 5.7.33
 -- Версия PHP: 8.0.14
 
@@ -170,12 +170,6 @@ CREATE TABLE `product_category` (
 --
 
 INSERT INTO `product_category` (`product_id`, `category_id`) VALUES
-(1, 1),
-(1, 2),
-(2, 5),
-(2, 6),
-(3, 9),
-(3, 10),
 (4, 5),
 (4, 6),
 (5, 1),
@@ -223,18 +217,6 @@ CREATE TABLE `product_image` (
 --
 
 INSERT INTO `product_image` (`product_id`, `image_id`) VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(1, 4),
-(2, 5),
-(2, 6),
-(2, 7),
-(2, 8),
-(3, 9),
-(3, 10),
-(3, 11),
-(3, 12),
 (4, 5),
 (4, 6),
 (4, 7),
