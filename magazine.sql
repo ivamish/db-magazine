@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 21 2022 г., 12:02
+-- Время создания: Окт 21 2022 г., 12:06
 -- Версия сервера: 5.7.33
 -- Версия PHP: 8.0.14
 
@@ -97,8 +97,6 @@ CREATE TABLE `product` (
   `price` float UNSIGNED NOT NULL,
   `old_price` float UNSIGNED DEFAULT NULL,
   `promo_price` float DEFAULT NULL,
-  `category_main` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `image_main` int(10) UNSIGNED NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -106,22 +104,22 @@ CREATE TABLE `product` (
 -- Дамп данных таблицы `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `description`, `price`, `old_price`, `promo_price`, `category_main`, `image_main`, `is_active`) VALUES
-(4, 'sunt libero', 'Ratione maiores quis sint. Omnis et voluptatibus deserunt. Non voluptatem dolor est labore aut et voluptatem. Et inventore illo explicabo commodi incidunt ut.', 634.51, 9752.55, NULL, 1, 1, 1),
-(5, 'commodi ipsum', 'Ipsam quibusdam reiciendis sapiente alias tenetur et minima. Illo et velit laboriosam vitae necessitatibus eum voluptatem tempora. Quis velit exercitationem ut dicta.', 6006.97, 9858.87, NULL, 2, 2, 1),
-(6, 'impedit ut', 'Enim ut eveniet laudantium harum aspernatur. Sint animi quam quaerat. Nostrum fugiat numquam consectetur accusantium.', 9364.46, 7905.61, NULL, 3, 3, 1),
-(7, 'cum praesentium', 'Possimus nihil voluptatem facilis et cum rerum impedit sint. Consequuntur enim eum sunt nobis nostrum ab. Blanditiis sit qui tempora.', 748.15, 6391.65, NULL, 4, 4, 1),
-(8, 'laudantium saepe', 'Dolor ut debitis tempore vel aliquid quasi odio placeat. Alias voluptas rerum asperiores ullam qui quod. Doloremque ex voluptatem cumque repellat. Repellat aut quod ut aut.', 4563.94, 1367.88, NULL, 5, 5, 1),
-(9, 'sit quisquam', 'Unde quasi modi non facere quos. Qui occaecati nobis sapiente. Nesciunt neque maiores quaerat. Quae necessitatibus enim aspernatur.', 528.2, 9015.89, NULL, 6, 6, 1),
-(10, 'quasi est', 'Animi quas distinctio incidunt vel eum aspernatur omnis. Temporibus illo qui at earum ut eligendi voluptas. Deserunt in est vel aut optio rerum. Voluptatem cumque sit et aut quo nobis quibusdam.', 6286.96, 7896.7, NULL, 7, 7, 1),
-(11, 'rerum quae', 'Quia dicta rem ipsam quia asperiores saepe esse. Ut ratione est et. Officiis voluptatem quaerat dicta culpa ut et aliquid. Rerum ullam repudiandae ullam non.', 4632.62, 1372.47, NULL, 8, 8, 1),
-(12, 'recusandae fugiat', 'Sit illum quibusdam esse esse hic dolores voluptatem nihil. Voluptas consequuntur est sunt. Tempora ratione et perferendis totam sequi et deleniti magnam.', 7151.07, 2824.69, NULL, 9, 9, 1),
-(13, 'quod est', 'In omnis nisi aut rerum velit. Voluptatem sit quisquam nobis. Sed sequi aperiam magni nostrum inventore. Corporis voluptatibus aut aut quod est alias et tempore.', 8282.33, 9626.23, NULL, 10, 10, 1),
-(14, 'delectus dicta', 'Non quo commodi hic rem qui. Perspiciatis et perferendis corporis omnis blanditiis. Ut ad architecto modi est.', 4173.36, 6419.08, NULL, 11, 11, 1),
-(15, 'aperiam facere', 'Libero consequatur sunt et tempore. Ea deleniti tempore tempora esse hic nulla. Velit odio et vel voluptatem voluptatem quo expedita vitae.', 4087.85, 6975.74, NULL, 12, 12, 1),
-(16, 'voluptatem ut', 'Et est ipsam commodi adipisci. Dolorum reiciendis necessitatibus odit corrupti enim aut.', 9978.86, 8275.76, NULL, 1, 1, 1),
-(17, 'repudiandae harum', 'Et omnis a fuga voluptatem et sequi. Odio explicabo aut doloribus fuga temporibus ipsam voluptates. Corporis dolorum eos et ullam id voluptatem. Qui libero aut expedita adipisci perspiciatis velit id.', 5367.67, 9367.53, NULL, 2, 2, 1),
-(18, 'sit in', 'Non adipisci explicabo non unde. Aut explicabo aliquam totam aut voluptatem. Quia tempore et natus reprehenderit occaecati.', 5767.05, 4985.31, NULL, 3, 3, 1);
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `old_price`, `promo_price`, `is_active`) VALUES
+(4, 'sunt libero', 'Ratione maiores quis sint. Omnis et voluptatibus deserunt. Non voluptatem dolor est labore aut et voluptatem. Et inventore illo explicabo commodi incidunt ut.', 634.51, 9752.55, NULL, 1),
+(5, 'commodi ipsum', 'Ipsam quibusdam reiciendis sapiente alias tenetur et minima. Illo et velit laboriosam vitae necessitatibus eum voluptatem tempora. Quis velit exercitationem ut dicta.', 6006.97, 9858.87, NULL, 1),
+(6, 'impedit ut', 'Enim ut eveniet laudantium harum aspernatur. Sint animi quam quaerat. Nostrum fugiat numquam consectetur accusantium.', 9364.46, 7905.61, NULL, 1),
+(7, 'cum praesentium', 'Possimus nihil voluptatem facilis et cum rerum impedit sint. Consequuntur enim eum sunt nobis nostrum ab. Blanditiis sit qui tempora.', 748.15, 6391.65, NULL, 1),
+(8, 'laudantium saepe', 'Dolor ut debitis tempore vel aliquid quasi odio placeat. Alias voluptas rerum asperiores ullam qui quod. Doloremque ex voluptatem cumque repellat. Repellat aut quod ut aut.', 4563.94, 1367.88, NULL, 1),
+(9, 'sit quisquam', 'Unde quasi modi non facere quos. Qui occaecati nobis sapiente. Nesciunt neque maiores quaerat. Quae necessitatibus enim aspernatur.', 528.2, 9015.89, NULL, 1),
+(10, 'quasi est', 'Animi quas distinctio incidunt vel eum aspernatur omnis. Temporibus illo qui at earum ut eligendi voluptas. Deserunt in est vel aut optio rerum. Voluptatem cumque sit et aut quo nobis quibusdam.', 6286.96, 7896.7, NULL, 1),
+(11, 'rerum quae', 'Quia dicta rem ipsam quia asperiores saepe esse. Ut ratione est et. Officiis voluptatem quaerat dicta culpa ut et aliquid. Rerum ullam repudiandae ullam non.', 4632.62, 1372.47, NULL, 1),
+(12, 'recusandae fugiat', 'Sit illum quibusdam esse esse hic dolores voluptatem nihil. Voluptas consequuntur est sunt. Tempora ratione et perferendis totam sequi et deleniti magnam.', 7151.07, 2824.69, NULL, 1),
+(13, 'quod est', 'In omnis nisi aut rerum velit. Voluptatem sit quisquam nobis. Sed sequi aperiam magni nostrum inventore. Corporis voluptatibus aut aut quod est alias et tempore.', 8282.33, 9626.23, NULL, 1),
+(14, 'delectus dicta', 'Non quo commodi hic rem qui. Perspiciatis et perferendis corporis omnis blanditiis. Ut ad architecto modi est.', 4173.36, 6419.08, NULL, 1),
+(15, 'aperiam facere', 'Libero consequatur sunt et tempore. Ea deleniti tempore tempora esse hic nulla. Velit odio et vel voluptatem voluptatem quo expedita vitae.', 4087.85, 6975.74, NULL, 1),
+(16, 'voluptatem ut', 'Et est ipsam commodi adipisci. Dolorum reiciendis necessitatibus odit corrupti enim aut.', 9978.86, 8275.76, NULL, 1),
+(17, 'repudiandae harum', 'Et omnis a fuga voluptatem et sequi. Odio explicabo aut doloribus fuga temporibus ipsam voluptates. Corporis dolorum eos et ullam id voluptatem. Qui libero aut expedita adipisci perspiciatis velit id.', 5367.67, 9367.53, NULL, 1),
+(18, 'sit in', 'Non adipisci explicabo non unde. Aut explicabo aliquam totam aut voluptatem. Quia tempore et natus reprehenderit occaecati.', 5767.05, 4985.31, NULL, 1);
 
 -- --------------------------------------------------------
 
