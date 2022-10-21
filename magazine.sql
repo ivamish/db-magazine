@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 21 2022 г., 11:22
+-- Время создания: Окт 21 2022 г., 12:02
 -- Версия сервера: 5.7.33
 -- Версия PHP: 8.0.14
 
@@ -153,8 +153,6 @@ INSERT INTO `product_basis` (`product_id`, `image_id`, `category_id`) VALUES
 (14, 11, 11),
 (15, 12, 12),
 (16, 1, 1),
-(17, 2, 2),
-(18, 3, 3),
 (17, 2, 2),
 (18, 3, 3);
 
@@ -321,6 +319,12 @@ ALTER TABLE `image`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `product_basis`
+--
+ALTER TABLE `product_basis`
+  ADD PRIMARY KEY (`product_id`);
 
 --
 -- Индексы таблицы `product_category`
